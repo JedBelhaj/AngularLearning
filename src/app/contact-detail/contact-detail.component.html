@@ -1,0 +1,24 @@
+<p>contact-detail works!</p>
+<button class="btn btn-primary" (click) = "goToContacts()">Go to Contacts</button>
+<div class="card border primary mb-3">
+    <div class="card-header bg-primary text-white">Contact Details</div>
+    <div class="card-body">
+        <div *ngIf="contact" else noContact>
+            <h3>Contact detail</h3>
+            <div class="card" style="width: 25em;">
+                <img class="card-img-top" [src]="contact.image" alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="card-title">{{contact.name}}</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Projects: <strong>{{contact.projects}}</strong></li>
+                        <li class="list-group-item">Email: <strong>{{contact.email}}</strong></li>
+                        <li class="list-group-item">Website: <strong>{{contact.website}}</strong></li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<ng-template #noContact>
+    <p>No contact selected</p>
+</ng-template>

@@ -15,7 +15,7 @@
             <tbody>
                 <tr *ngFor="let contact of contacts">
                     <td>{{contact.name}}</td>
-                    <td><a class="btn btn-success" routerLink="#">Details</a></td>
+                    <td><a class="btn btn-success" routerLink="/contacts/{{contact.id}}">Details</a></td>
                     <td><button class="btn btn-danger" (click) = "onDeleteContact(contact.id)">Delete</button></td>
                 </tr>
             </tbody>

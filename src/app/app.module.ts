@@ -11,6 +11,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { CommentComponent } from './comment/comment.component';
 import { GetCharPipe } from './get-char.pipe';
 import { FormsModule } from '@angular/forms';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     ContactsComponent,
     CommentComponent,
-    GetCharPipe
+    GetCharPipe,
+    ContactDetailComponent
   ],
   imports: [
     BrowserModule,

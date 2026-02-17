@@ -14,7 +14,9 @@ export class ContactService {
   }
 
   getContactById(id: number): Contact | undefined {
-    return this.contacts.find(contact => contact.id === id);
+    
+    
+    return this.contacts.find(contact => contact.id == id);
   }
 
   deleteContactById(id: number): void{
