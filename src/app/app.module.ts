@@ -12,6 +12,7 @@ import { CommentComponent } from './comment/comment.component';
 import { GetCharPipe } from './get-char.pipe';
 import { FormsModule } from '@angular/forms';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     ContactsComponent,
     CommentComponent,
     GetCharPipe,
-    ContactDetailComponent
+    ContactDetailComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,

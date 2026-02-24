@@ -6,13 +6,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SigninComponent } from './signin/signin.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  {path: "", component:HomeComponent},
-  {path: "about", component:AboutComponent},
-  {path: "contacts", component:ContactsComponent},
+  {path: "", component:HomeComponent, canActivate: [authGuard]},
+  {path: "about", component:AboutComponent, canActivate: [authGuard]},
+  {path: "contacts", component:ContactsComponent, canActivate: [authGuard]},
+  {path: "contacts/:id", component:ContactDetailComponent, canActivate: [authGuard]},
   {path: "signin", component:SigninComponent},
-  {path: "contacts/:id", component:ContactDetailComponent},
   {path: "**", component:NotFoundComponent}
 ];
 

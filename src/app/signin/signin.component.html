@@ -1,1 +1,6 @@
-<p>signin works!</p>
+<div>
+    <button class="btn btn-success" (click)="onSignIn()" [disabled]="isAuth">Sign in</button>
+</div>
+<div class="mt-3">
+    <button class="btn btn-danger" (click)="onSignOut()" [disabled]="!isAuth">Sign out</button>
+</div>
